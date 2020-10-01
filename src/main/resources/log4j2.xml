@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict="true" name="MinestomInterface" packages="net.minestom.gui.log">
+    <Appenders>
+        <TextAreaAppender name="Interface">
+            <Layout type="PatternLayout" pattern="[%t] [%d{HH:mm:ss}] - %p - %m%n"/>
+        </TextAreaAppender>
+        <Appender type="Console" name="STDOUT-WithCaller">
+            <Layout type="PatternLayout" pattern="[%t] [%d{HH:mm:ss}] (%C{1}.%M) - %p - %m%n"/>
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="STDOUT-WithCaller" level="info"/>
+            <AppenderRef ref="Interface" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>

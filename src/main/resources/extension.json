@@ -1,0 +1,6 @@
+{
+  "entrypoint": "net.minestom.gui.GuiExtension",
+  "name": "GUInterface for Minestom servers",
+  "mixinConfig": "mixins.gui.json",
+  "version": "1.0"
+}
