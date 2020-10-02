@@ -1,5 +1,6 @@
 package net.minestom.gui.log
 
+import net.minestom.server.extras.selfmodification.MinestomOverwriteClassLoader
 import org.apache.logging.log4j.core.Filter
 import org.apache.logging.log4j.core.Layout
 import org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender
@@ -31,6 +32,11 @@ class TextAreaAppender: AbstractOutputStreamAppender<JTextAreaManager> {
 }
 
 object JTextAreaManager: OutputStreamManager(ByteArrayOutputStream(), "TextAreaManager", PatternLayout.createDefaultLayout(), true) {
+
+    init {
+
+    }
+
     private val out get()= outputStream as ByteArrayOutputStream
     private val subscribers = mutableListOf<Subscriber>()
 

@@ -2,6 +2,7 @@ package net.minestom.gui
 
 import net.minestom.server.MinecraftServer
 import net.minestom.server.extensions.Extension
+import net.minestom.server.extras.selfmodification.MinestomOverwriteClassLoader
 import javax.swing.UIManager
 
 class GuiExtension: Extension() {
